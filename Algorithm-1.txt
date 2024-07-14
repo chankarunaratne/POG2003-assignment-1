@@ -1,4 +1,4 @@
-﻿create array “marks” with 30 elements
+create array “marks” with 30 elements
 set maxMark to 0
 set minMark to 30
 set counter to 0
@@ -13,10 +13,10 @@ repeat the following as long as the counter is <30:
 	if user inputs "done":
 		break out of the loop
 	try: convert the user input mark into an integer
-	catch exception: print "Please enter a number"
+	catch exception: print "Error: Please enter a number"
 	
 	if mark < 0 or mark > 30:
-		print "Please enter a number between 0 and 30"
+		print "Error: please enter a mark between 0 and 30"
 
 	add mark into the “marks” array at position counter
 	increment counter by 1
@@ -26,7 +26,8 @@ repeat the following as long as the counter is <30:
 	if mark < minMark then
 		set minMark to mark
 
-print assignment name followed by students marks
-print maxMark " is the Maximum mark"
-print minMark " is the Minimum mark"
+print assignment name
+print the student number and their corresponding mark
+print maxMark 
+print minMark
 
