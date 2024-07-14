@@ -23,10 +23,12 @@ public class CalculateMaxMin
         while(counter < 30) {
         System.out.println("Enter the mark for student " + (counter+1) + " or enter done if you are finished");
         String input = scanner.nextLine();
+        
         // check if the user inputs "done"
         if(input.equalsIgnoreCase("done")) {
             break;
         }
+        
         // convert the input to an integer
         int mark = -1;
         try {
@@ -36,6 +38,7 @@ public class CalculateMaxMin
         }
         
         // validate mark
+        
         if (mark <0 || mark >30) {
             System.out.println("Error: please enter a mark between 0 and 30");
             continue;
@@ -56,11 +59,11 @@ public class CalculateMaxMin
         
     }
     
-    // print the results
+        // print the results
         System.out.println("Assignment name: " + asstName);
         System.out.println("Marks: ");
         for (int i=0; i<counter; i++) {
-            System.out.println("Student " + (i+1) + ": " + marks[i]);
+            System.out.println("Student " + (i +1 ) + ": " + marks[i]);
         }
         System.out.println("Maximum mark is " + maxMark);
         System.out.println("Minimum mark is " + minMark);
