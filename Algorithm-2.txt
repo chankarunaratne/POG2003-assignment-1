@@ -1,0 +1,8 @@
+// in addition to the content of algorithm-1, do the following for calculating the mean and standard deviation
+set total = 0
+update total with each iteration
+double mean
+calculate mean by doing the following:
+	if the counter is > 0, divide the total by the counter and set it to mean
+		if not, set the mean to 0
+print mean
