@@ -12,6 +12,7 @@ public class CalculateMaxMin
         int[] marks = new int[30];
         int maxMark = 0;
         int minMark = 30;
+        int total = 0;
         int counter = 0;
         String asstName;
         
@@ -35,6 +36,7 @@ public class CalculateMaxMin
             mark = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Error: Please enter a number");
+            continue;
         }
         
         // validate mark
@@ -57,8 +59,20 @@ public class CalculateMaxMin
             minMark = mark;
         }
         
+        // calculate total
+        total += mark;
+        
     }
     
+        
+        // calculate mean
+        double mean;
+        if (counter > 0) {
+            mean = (double) total / counter;
+        } else {
+            mean = 0;
+        }
+        
         // print the results
         System.out.println("Assignment name: " + asstName);
         System.out.println("Marks: ");
@@ -67,6 +81,8 @@ public class CalculateMaxMin
         }
         System.out.println("Maximum mark is " + maxMark);
         System.out.println("Minimum mark is " + minMark);
+        System.out.println("The mean mark is " + mean);
+        
         
         //close the scanner
         scanner.close();
