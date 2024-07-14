@@ -4,7 +4,7 @@
  * Author: Chandima karunaratne
  */
 import java.util.Scanner;
-public class CalculateMaxMin
+public class CalcuateStatistics
 {
     
     public static void main(String[] args) {
@@ -73,6 +73,16 @@ public class CalculateMaxMin
             mean = 0;
         }
         
+        // calculate variance
+        double variance = 0;
+        for (int i=0; i<counter; i++) {
+            variance += Math.pow(marks[i] - mean, 2);
+        }
+        variance /= counter - 1;
+        
+        // calculate standard deviation
+        double standardDeviation = Math.sqrt(variance);
+        
         // print the results
         System.out.println("Assignment name: " + asstName);
         System.out.println("Marks: ");
@@ -82,6 +92,7 @@ public class CalculateMaxMin
         System.out.println("Maximum mark is " + maxMark);
         System.out.println("Minimum mark is " + minMark);
         System.out.println("The mean mark is " + mean);
+        System.out.println("The standard deviation is " + standardDeviation);
         
         
         //close the scanner
