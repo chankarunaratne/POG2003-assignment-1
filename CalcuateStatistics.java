@@ -34,7 +34,7 @@ public class CalcuateStatistics
         int mark = -1;
         try {
             mark = Integer.parseInt(input);
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) { //error message in case non-integer is entered
             System.out.println("Error: Please enter a number");
             continue;
         }
@@ -95,7 +95,7 @@ public class CalcuateStatistics
         System.out.println("The standard deviation is " + standardDeviation);
         
         
-        //close the scanner
+        //close the scanner to reserve resources
         scanner.close();
     
     }
