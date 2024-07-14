@@ -5,4 +5,13 @@ double mean
 calculate mean by doing the following:
 	if the counter is > 0, divide the total by the counter and set it to mean
 		if not, set the mean to 0
+calculate the standard deviation by doing the following:
+	double variance = 0
+	Loop throught the marks:
+		for each mark, subtract the mean and square the result
+		add the answer to the variance
+	divide the variance by counter-1 to find sample variance
+	take the square root of variance to get the standard deviation
+	
 print mean
+print standard deviation
