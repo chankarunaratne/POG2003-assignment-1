@@ -1,17 +1,32 @@
-// in addition to the content of algorithm-1, do the following for calculating the mean and standard deviation
-set total = 0
-update total with each iteration
-double mean
-calculate mean by doing the following:
-	if the counter is > 0, divide the total by the counter and set it to mean
-		if not, set the mean to 0
-calculate the standard deviation by doing the following:
-	double variance = 0
-	Loop throught the marks:
-		for each mark, subtract the mean and square the result
-		add the answer to the variance
-	divide the variance by counter-1 to find sample variance
-	take the square root of variance to get the standard deviation
+create array “marks” with 30 elements
+set maxMark to 0
+set minMark to 30
+set counter to 0
+int mark
+String asstName
+
+ask the user for the assignment name
+store assignment name in asstName
+
+repeat the following as long as the counter is <30:
+	ask user for mark or if they are finished
+	if user inputs "done":
+		break out of the loop
+	try: convert the user input mark into an integer
+	catch exception: print "Please enter a number"
 	
-print mean
-print standard deviation
+	if mark < 0 or mark > 30:
+		print "Please enter a number between 0 and 30"
+
+	add mark into the “marks” array at position counter
+	increment counter by 1
+
+	if mark > maxmark then
+		set maxMark to mark
+	if mark < minMark then
+		set minMark to mark
+
+print assignment name followed by students marks
+print maxMark " is the Maximum mark"
+print minMark " is the Minimum mark"
+
