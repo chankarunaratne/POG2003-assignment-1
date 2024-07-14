@@ -1,16 +1,27 @@
-﻿create array “marks” containing 30 elements
-set maxMark to -1
-set minMark to 101
-set counter = 1
+﻿create array “marks”
+set maxMark to 0
+set minMark to 30
+set counter to 0
+int mark
+String asstName
 
-do the following as long as the counter is <=30:
-	ask user for mark
-	add mark into the “marks” array at the position [counter -1]
-	if mark > maxMark then
-		set maxMark to mark
-	if mark < minMark then
-		set minMark to mark
-	increase counter by 1
+ask the user for the assignment name
+store assignment name in asstName
 
-print “The highest mark is ” maxMark
-print “The lowest mark is ” minMark
+repeat the following as long as the counter is <=30:
+	ask user for mark or if they are finished
+	if user inputs "done":
+		break out of the loop
+add mark into the “marks” array
+if mark > maxmark then
+	set maxMark to mark
+if mark < minMark then
+	set minMark to mark
+if mark is >=31
+	print "you entered an invalid mark. Please make sure to input a mark between 0 and 30"
+if mark <=-1
+	print "you entered an invalid mark. Please make sure to input a mark between 0 and 30"
+if user inputs "done"
+	print asstName marks
+	print maxMark, minMark
+
