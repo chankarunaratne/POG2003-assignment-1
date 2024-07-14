@@ -1,32 +1,26 @@
-create array “marks” with 30 elements
-set maxMark to 0
-set minMark to 30
-set counter to 0
-int mark
-String asstName
+// in addition to the functionality in algorithm 1, do the following for mean and standard deviation
 
-ask the user for the assignment name
-store assignment name in asstName
+int total = 0
+calculate total after each iteration:
+	add mark to total
 
-repeat the following as long as the counter is <30:
-	ask user for mark or if they are finished
-	if user inputs "done":
-		break out of the loop
-	try: convert the user input mark into an integer
-	catch exception: print "Please enter a number"
-	
-	if mark < 0 or mark > 30:
-		print "Please enter a number between 0 and 30"
+calculate mean:
+	if the counter is > 0:
+		mean = total/counter
+	else
+		mean = 0
 
-	add mark into the “marks” array at position counter
-	increment counter by 1
+calulate variance:
+	double variance = 0
+	loop through the marks:
+		for each mark, substract the mean and square the result
+		add the result to variance
 
-	if mark > maxmark then
-		set maxMark to mark
-	if mark < minMark then
-		set minMark to mark
+calculate sample variance:
+	divide variance by counter -1
 
-print assignment name followed by students marks
-print maxMark " is the Maximum mark"
-print minMark " is the Minimum mark"
+calculate standard deviation:
+	get the square root of variance
 
+print mean
+print standard deviation
