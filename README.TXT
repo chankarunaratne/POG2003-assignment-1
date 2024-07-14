@@ -1,12 +1,7 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: PROG2003-assignment-1
+PURPOSE OF PROJECT: To showcase the basic knowledge of algorithms and Java programming
+VERSION or DATE: 14/07/2024
+HOW TO START THIS PROJECT: Run CalcuateStatistics.java
+AUTHORS: Chandima Karunaratne
+USER INSTRUCTIONS: This program was built using BlueJ. All files needed to open this project on BlueJ is included in the repository.
